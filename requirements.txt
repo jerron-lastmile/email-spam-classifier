@@ -1,0 +1,7 @@
+# MCP Agent Email Spam Classifier Dependencies
+
+# Core framework
+mcp-agent>=0.1.0
+
+# Optional: OpenAI support (if you want to use GPT models)
+# openai>=1.0.0

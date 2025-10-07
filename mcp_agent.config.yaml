@@ -1,0 +1,32 @@
+# MCP Agent Configuration for Email Spam Classifier
+
+# MCP Servers
+mcp_servers:
+  gmail:
+    type: sse
+    command: npx
+    args:
+      - "-y"
+      - "@mintmcp/gmail@latest"
+    env:
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      GOOGLE_REDIRECT_URI: ${GOOGLE_REDIRECT_URI}
+      GOOGLE_REFRESH_TOKEN: ${GOOGLE_REFRESH_TOKEN}
+
+# LLM Configuration
+llm:
+  provider: anthropic
+  model: claude-3-5-sonnet-20241022
+  api_key: ${ANTHROPIC_API_KEY}
+  temperature: 0.1
+  max_tokens: 4096
+
+# Execution Engine
+execution:
+  engine: asyncio
+
+# Logging Configuration
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
