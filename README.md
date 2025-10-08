@@ -1,4 +1,4 @@
-# Email Spam Classifier!!!
+# Email Spam Classifier!
 
 An intelligent email spam classification agent built with mcp-agent that automatically analyzes your Gmail inbox and identifies spam emails using LLM-powered classification.
 
